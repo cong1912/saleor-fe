@@ -1,0 +1,26 @@
+query Products($first: String, $channel: String) {
+  products(first: $first, channel: channel) {
+    node {
+      id
+      name
+      thumbnail {
+        url
+        alt
+      }
+      pricing {
+        priceRange {
+          start {
+            gross {
+              amount
+            }
+          }
+          stop {
+            gross {
+              amount
+            }
+          }
+        }
+      }
+    }
+  }
+}
